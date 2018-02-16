@@ -1,0 +1,15 @@
+/* below home component css */
+
+.mat-card-header-text {
+    margin: 0 auto !important;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.example-container>* {
+    width: 100%;
+}

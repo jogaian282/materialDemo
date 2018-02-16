@@ -1,0 +1,17 @@
+<!-- Begin html -->
+<div id="outerWrapper">
+    <mat-card class="cardContentCss">Choose your theme</mat-card>
+
+    <mat-card class="margin-t-10">
+        <form>
+            <mat-form-field>
+                <mat-select placeholder="Select theme" name="colors" [(ngModel)]="selectedColor" (change)="selectTheme(selectedColor,$event)">
+                    <mat-option *ngFor="let colors of themeColors" [value]="colors.value">
+                        {{ colors.viewValue }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </form>
+    </mat-card>
+</div>
+<!-- end html -->
