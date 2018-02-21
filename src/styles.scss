@@ -1,13 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css?family=Libre+Franklin');
-
-body,html {
+body,
+html {
     height: 100%;
 }
+
 body {
     margin: 0;
     font-family: 'Libre Franklin', sans-serif;
+    overflow: hidden;
 }
 
 .iconFont {
