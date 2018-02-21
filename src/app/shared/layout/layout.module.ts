@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { LayoutService } from './layout.service';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 
 @NgModule({
   imports: [
@@ -20,8 +21,9 @@ import { MainLayoutComponent } from './main-layout/main-layout.component';
     HeaderComponent,
     FooterComponent,
     SidenavComponent,
-    MainLayoutComponent
-  ],
+    MainLayoutComponent,
+    AuthLayoutComponent
+],
   exports: [
     HeaderComponent,
     FooterComponent,

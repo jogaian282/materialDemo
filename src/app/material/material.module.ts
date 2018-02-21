@@ -12,7 +12,8 @@ import {
   MatCheckboxModule,
   MatRadioModule,
   MatIconModule,
-  MatListModule
+  MatListModule,
+  MatTabsModule
 } from "@angular/material";
 import "hammerjs";
 
@@ -27,6 +28,7 @@ import "hammerjs";
     MatRadioModule,
     MatMenuModule,
     MatSidenavModule,
+    MatTabsModule,
     MatCheckboxModule,
     MatFormFieldModule,
     MatIconModule,
@@ -41,6 +43,7 @@ import "hammerjs";
     MatRadioModule,
     MatSelectModule,
     MatCheckboxModule,
+    MatTabsModule,
     MatCardModule,
     MatMenuModule,
     MatSidenavModule,
