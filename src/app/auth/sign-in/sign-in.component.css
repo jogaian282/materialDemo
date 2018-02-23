@@ -1,3 +1,10 @@
-.title-center {
+/* Sign-In Component Css */
+
+.centerTitle {
     margin: 0 auto;
+}
+
+.signInCard {
+   /* Calculating Card Height */
+    height: calc(100% - 74px);
 }

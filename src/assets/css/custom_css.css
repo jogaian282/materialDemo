@@ -1,0 +1,25 @@
+/* below custom_css for app */
+
+.iconFont {
+    margin-top: 8px;
+}
+
+.sidenav,
+.cardContentCss {
+    background: #EDE7F6;
+    color: #2C2931;
+    font-weight: 600;
+}
+
+.toolbar-filler {
+    flex: 1 1 auto;
+}
+
+.centerTitle {
+    margin: 0 auto;
+}
+
+.authCardPosition {
+   /* Calculating Card Height */
+    height: calc(100% - 74px);
+}

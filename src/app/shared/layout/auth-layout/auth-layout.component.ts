@@ -8,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
 
 export class AuthLayoutComponent implements OnInit {
 
-  navLinks:any[] = [{"path":"sign-in","label":"SIGN-IN"},{"path":"sign-up","label":"SIGN-UP"}];
+  // navLinks:any[] = [{"path":"sign-in","label":"SIGN-IN"},{"path":"sign-up","label":"SIGN-UP"}];
 
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

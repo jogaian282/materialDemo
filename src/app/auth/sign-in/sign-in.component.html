@@ -1,15 +1,72 @@
 <!-- begin sign-in component -->
-<mat-form-field>
-    <input matInput placeholder="Input">
-  </mat-form-field>
 
-  <mat-form-field>
-    <textarea matInput placeholder="Textarea"></textarea>
-  </mat-form-field>
+<!-- begin toolbar -->
+<mat-toolbar color="primary">
+    
+    <a aria-label="veedu-rent" class="mat-button" mat-button="" routerlink="/" tabindex="0" aria-disabled="false" href="/">
+        <span class="mat-button-wrapper">
+        <!-- SVG ICON -->
+        <!-- <img _ngcontent-c1="" alt="angular" class="docs-angular-logo" src="../../../assets/img/homepage/angular-white-transparent.svg"> -->
+        <mat-icon>home</mat-icon>
+        <span class="font-16 text-bold">Veedu-Rent</span>
+        </span>
+        <div class="mat-button-ripple mat-ripple" matripple=""></div>
+        <div class="mat-button-focus-overlay"></div>
+    </a>
 
-  <mat-form-field>
-    <mat-select placeholder="Select">
-      <mat-option value="option">Option</mat-option>
-    </mat-select>
-  </mat-form-field>
+    <!-- This fills the remaining space of the current row -->
+    <span class="toolbar-filler"></span>
+
+    <a mat-raised-button color="accent" type="button" (click)="register($event)">
+        Register
+    </a>
+
+    <span>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                <mat-icon>supervisor_account</mat-icon>
+                <span>Owner portal</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>person</mat-icon>
+                <span>Tenant portal</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>group</mat-icon>
+                <span>Agent portal</span>
+            </button>
+        </mat-menu>
+    </span>
+</mat-toolbar>
+<!-- end toolbar -->
+
+<div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="authCardPosition">
+    <div fxFlex="1 1 33%">
+        <mat-card>
+            <mat-card-title>
+                <mat-toolbar color="primary">
+                    <span class="centerTitle">Login</span>
+                </mat-toolbar>
+            </mat-card-title>
+            <mat-card-content>
+                <div fxLayout="column">
+                    <mat-form-field fxFlex="1" [hideRequiredMarker]=false floatLabel="always">
+                        <input type="text" placeholder="Username" matInput #username required>
+                    </mat-form-field>
+                    <mat-form-field fxFlex="1" [hideRequiredMarker]=false floatLabel="always">
+                        <input matInput required placeholder="Password" [type]="hide ? 'password' : 'text'">
+                        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+                    </mat-form-field>
+                </div>
+            </mat-card-content>
+            <mat-card-actions fxLayoutAlign="flex-end">
+                <button mat-raised-button color="accent" type="button" (click)="authVerification($event)">Sign-in</button>
+                <button mat-raised-button color="warn" type="button">Reset</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
 <!-- end sign-in component -->

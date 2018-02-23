@@ -1,4 +1,4 @@
-import { Component, OnInit, Output , EventEmitter , Input , AfterViewInit  } from '@angular/core';
+import { Component, OnInit, Input , AfterViewInit  } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +6,7 @@ import { Component, OnInit, Output , EventEmitter , Input , AfterViewInit  } fro
   styleUrls: ['./header.component.css']
 })
 
-export class HeaderComponent implements OnInit,AfterViewInit {
+export class HeaderComponent implements OnInit, AfterViewInit {
 
   @Input() sideBarRef;
 

@@ -1,6 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css?family=Libre+Franklin');
+
+@-ms-viewport {
+    width: auto;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body,
 html {
     height: 100%;
@@ -9,7 +20,6 @@ html {
 body {
     margin: 0;
     font-family: 'Libre Franklin', sans-serif;
-    overflow: hidden;
 }
 
 .iconFont {
@@ -21,4 +31,17 @@ body {
     background: #EDE7F6;
     color: #2C2931;
     font-weight: 600;
+}
+
+a {
+    cursor: pointer;
+}
+
+svg {
+    width: 100%;
+}
+
+strong,
+b {
+    font-weight: bold;
 }

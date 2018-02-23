@@ -1,4 +1,4 @@
-import { Component,OnInit,HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { LayoutService } from '../layout.service';
 import { OverlayContainer } from '@angular/cdk/overlay';
 
@@ -10,17 +10,17 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 
 export class MainLayoutComponent implements OnInit {
 
-  currentColor:string;
-  isChangeTheme:boolean;
+  currentColor: string;
+  isChangeTheme: boolean;
   @HostBinding('class') componentCssClass;
 
-  constructor(private layoutService:LayoutService,
-  private overlayContainer:OverlayContainer) { }
+  constructor(private layoutService: LayoutService,
+  private overlayContainer: OverlayContainer) { }
 
   ngOnInit() {
     this.layoutService.currentData.subscribe(currentData => {
       this.currentColor = currentData;
-      if(this.currentColor != '') {
+      if (this.currentColor !== '') {
         this.isChangeTheme = true;
         this.overlayContainer.getContainerElement().classList.add(this.currentColor);
         this.componentCssClass = this.currentColor;

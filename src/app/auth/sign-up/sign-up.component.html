@@ -1,3 +1,76 @@
-<p>
-  sign-up works!
-</p>
+<!-- begin sign-up component -->
+<!-- toolbar section -->
+<mat-toolbar color="primary">
+    
+    <a aria-label="veedu-rent" class="mat-button" mat-button="" routerlink="/" tabindex="0" aria-disabled="false" href="/">
+      <span class="mat-button-wrapper">
+      <!-- SVG ICON -->
+      <!-- <img _ngcontent-c1="" alt="angular" class="docs-angular-logo" src="../../../assets/img/homepage/angular-white-transparent.svg"> -->
+        <mat-icon>home</mat-icon>
+        <span class="font-16 text-bold">Veedu-Rent</span>
+      </span>
+      <div class="mat-button-ripple mat-ripple" matripple=""></div>
+      <div class="mat-button-focus-overlay"></div>
+    </a>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="toolbar-filler"></span>
+
+    <a mat-raised-button color="accent" type="button" (click)="login($event)">
+      Login
+    </a>
+</mat-toolbar>
+<!-- end toolbar section -->
+<div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" class="authCardPosition">
+  <div fxFlex="1 1 44%">
+    <mat-card>
+      <mat-card-title>
+        <mat-toolbar color="primary">
+          <span class="centerTitle">Register</span>
+        </mat-toolbar>
+      </mat-card-title>
+      <mat-card-content>
+        <div fxLayout="column">
+          <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between">
+            <mat-form-field [hideRequiredMarker]=false floatLabel="always">
+              <input type="text" placeholder="First Name" matInput #firstName required>
+            </mat-form-field>
+            <mat-form-field floatLabel="always">
+              <input type="text" placeholder="Middle Name" matInput>
+            </mat-form-field>
+            <mat-form-field floatLabel="always">
+              <input type="text" placeholder="Last Name" matInput>
+            </mat-form-field>
+          </div>
+          <mat-form-field [hideRequiredMarker]=false floatLabel="always">
+            <input type="text" placeholder="Username" matInput required>
+          </mat-form-field>
+          <mat-form-field [hideRequiredMarker]=false floatLabel="always">
+            <input matInput required placeholder="Password" [type]="hide ? 'password' : 'text'">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+          </mat-form-field>
+          <mat-form-field floatLabel="always">
+            <textarea matInput placeholder="Address"></textarea>
+          </mat-form-field>
+          <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between">
+            <mat-form-field floatLabel="always">
+              <input matInput placeholder="City">
+            </mat-form-field>
+            <mat-form-field floatLabel="always">
+              <input matInput placeholder="State">
+            </mat-form-field>
+            <mat-form-field floatLabel="always">
+              <input matInput #postalCode maxlength="5" placeholder="Postal Code">
+              <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions fxLayoutAlign="flex-end">
+        <button mat-raised-button color="accent" type="button" (click)="register($event)">Sign-up</button>
+        <button mat-raised-button color="warn" type="button">Reset</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+<!-- end sign-up component -->
